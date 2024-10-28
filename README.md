@@ -1,10 +1,24 @@
 # RH294-EX294_Study
 Study and practice notes for EX294 RHCE test
 
+## Requirements
+* ansible 2.8 - on control node
+* python3 - on both control and managed 
+* sshd - up and running everywhere
+
+## Other Links
+* [Ahmed Almasah's Udemy Course](https://www.udemy.com/course/red-hat-exams-rhce-ex294-ansible-automatiomation-ex407/)
+* [Blog post at lisenet.com](https://www.lisenet.com/2019/ansible-sample-exam-for-ex294/)
+* [Andrew Mallett Courses on Plural-Sight](https://app.pluralsight.com/paths/certificate/rhce-red-hat-certified-engineer-ex294)
+* [Sander van Vugt Detailed book and lab-exercises](https://www.amazon.com/RHCE-EX294-Cert-Guide-Certification/dp/0136872433)
+
+## Provision own environment
+* https://github.com/anmcleanRH/rhce-environment
+
 # Test OBJECTIVES
 As an RHCE exam candidate, you should be able to handle all responsibilities expected of a Red Hat Certified System Administrator, including these tasks:
 
-Be able to perform all tasks expected of a Red Hat Certified System Administrator
+## Be able to perform all tasks expected of a Red Hat Certified System Administrator
 - Understand and use essential tools
 - Operate running systems
 - Configure local storage
@@ -13,7 +27,7 @@ Be able to perform all tasks expected of a Red Hat Certified System Administrato
 - Manage users and groups
 - Manage security
 
-Understand core components of Ansible
+## Understand core components of Ansible
 - Inventories
 - Modules
 - Variables
@@ -27,37 +41,37 @@ Understand core components of Ansible
 - Roles
 - Use provided documentation to look up specific information about Ansible modules and commands
 
-Use roles and Ansible Content Collections
+## Use roles and Ansible Content Collections
 - Create and work with roles
 - Install roles and use them in playbooks
 - Install Content Collections and use them in playbooks
 - Obtain a set of related roles, supplementary modules, and other content from content collections, and use them in a playbook.
 
-Install and configure an Ansible control node
+## Install and configure an Ansible control node
 - Install required packages
 - Create a static host inventory file
 - Create a configuration file
 - Create and use static inventories to define groups of hosts
 
-Configure Ansible managed nodes
+## Configure Ansible managed nodes
 - Create and distribute SSH keys to managed nodes
 - Configure privilege escalation on managed nodes
 - Deploy files to managed nodes
 - Be able to analyze simple shell scripts and convert them to playbooks
 
-Run playbooks with Automation content navigator
+## Run playbooks with Automation content navigator
 - Know how to run playbooks with Automation content navigator
 - Use Automation content navigator to find new modules in available Ansible Content Collections and use them
 - Use Automation content navigator to create inventories and configure the Ansible environment
 
-Create Ansible plays and playbooks
+## Create Ansible plays and playbooks
 - Know how to work with commonly used Ansible modules
 - Use variables to retrieve the results of running a command
 - Use conditionals to control play execution
 - Configure error handling
 - Create playbooks to configure systems to a specified state
 
-Automate standard RHCSA tasks using Ansible modules that work with:
+## Automate standard RHCSA tasks using Ansible modules that work with:
 - Software packages and repositories
 - Services
 - Firewall rules
@@ -69,8 +83,8 @@ Automate standard RHCSA tasks using Ansible modules that work with:
 - Security
 - Users and groups
 
-Manage content
+## Manage content
 - Create and use templates to create customized configuration files
 - Use Ansible Vault in playbooks to protect sensitive data
 
-As with all Red Hat performance-based exams, configurations must persist after reboot without intervention.
+# As with all Red Hat performance-based exams, configurations must persist after reboot without intervention.

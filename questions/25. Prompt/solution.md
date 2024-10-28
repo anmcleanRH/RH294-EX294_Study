@@ -1,0 +1,42 @@
+# 25. Prompt - Solution
+
+The playbook might look as follows:
+```yml
+---
+- name: Create new account
+  hosts: all
+  become: true
+  gather_facts: false
+  vars:
+    group: networking
+  vars_prompt:
+  - name: username
+    prompt: What is your username?
+    private: false
+  - name: password
+    prompt: What is your password?
+    private: true
+    confirm: true
+    salt_size: 2
+    encrypt: sha512_crypt
+  tasks:
+  - name: Create group for the users
+    group:
+      name: '{{ group }}'
+      state: present
+  - name: Make people belonging to the {{ group }} allowed to use nmcli
+    copy:
+      content: "%{{ group }} ALL = NOPASSWD: /usr/bin/nmcli\n"
+      dest: /etc/sudoers.d/{{ group }}
+  - name: Create account for the user
+    user:
+      name: "{{ username }}"
+      password: "{{ password }}"
+      groups: ['{{ group }}']
+...
+```
+
+Go to `/home/automation/plays` and execute
+```bash
+ansible-playbook prompt.yml
+```
